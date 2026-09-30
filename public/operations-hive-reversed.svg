@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-label="Operations Hive reversed logo">
+  <rect width="1200" height="360" fill="#1D211E"/>
+  <g transform="translate(54 30)">
+    <path fill="#B97859" d="M0 60 105 0v300L0 240z"/>
+    <path fill="#512C32" d="M180 0 285 60v180L180 300z"/>
+    <path fill="#1D211E" d="M105 88 143 112 180 88v124l-37-24-38 24z"/>
+    <path fill="#B97859" d="M105 132h75v52h-75z"/>
+  </g>
+  <text x="390" y="220" fill="#F4F0E9" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="600" letter-spacing="-3">Operations Hive</text>
+</svg>

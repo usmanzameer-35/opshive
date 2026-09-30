@@ -1,0 +1,79 @@
+.software-stack-section {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(5rem, 9vw, 8rem);
+  background: #f5f1ea;
+  color: #111411;
+  border-block: 1px solid rgba(17, 20, 17, 0.14);
+}
+
+.software-stack-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  background-image: radial-gradient(rgba(17, 20, 17, 0.2) 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+.software-stack-section > .container { position: relative; z-index: 1; }
+.software-groups { display: grid; gap: 1rem; margin-top: 3.5rem; }
+.software-group {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.28fr) 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 1.1rem;
+  border: 1px solid rgba(17, 20, 17, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(12px);
+}
+.software-group-label {
+  padding: 0.8rem 0.6rem;
+  font: 700 0.68rem/1.4 ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: rgba(17, 20, 17, 0.62);
+}
+.software-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.65rem; }
+.software-tile {
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(17, 20, 17, 0.14);
+  border-radius: 13px;
+  background: rgba(245, 241, 234, 0.82);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.software-tile:hover { transform: translateY(-4px); background: #d9ff48; border-color: #111411; }
+.software-tile img { width: 28px; height: 28px; object-fit: contain; filter: grayscale(1); }
+.software-tile:hover img { filter: grayscale(0); }
+.software-wordmark {
+  width: 34px; height: 34px; display: grid; place-items: center;
+  border-radius: 9px; background: #111411; color: #f5f1ea;
+  font: 750 0.68rem/1 ui-monospace, SFMono-Regular, monospace;
+  letter-spacing: 0.05em;
+}
+.software-tile strong { font-size: 0.82rem; line-height: 1.25; letter-spacing: -0.01em; }
+.software-boundary {
+  display: flex; align-items: center; gap: 0.65rem;
+  margin: 1.5rem 0 0; color: rgba(17, 20, 17, 0.65); font-size: 0.78rem;
+}
+
+@media (max-width: 900px) {
+  .software-group { grid-template-columns: 1fr; gap: 0.5rem; }
+  .software-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .software-stack-section { padding-block: 4.5rem; }
+  .software-grid { grid-template-columns: 1fr 1fr; }
+  .software-tile { min-height: 104px; }
+  .software-boundary { align-items: flex-start; }
+}
